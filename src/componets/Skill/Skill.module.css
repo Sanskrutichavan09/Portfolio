@@ -1,0 +1,168 @@
+/* Main Container Styling */
+.container {
+  background-color: #0d1117; /* Dark background */
+  border-radius: 20px;
+  padding: 50px;
+  margin: 30px auto;
+  max-width: 1200px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+  color: #ffffff; /* White text */
+}
+
+/* Title Styling */
+.containerTitle {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0da8e6; /* Highlight color */
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+/* Content Wrapper */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  gap: 30px; /* Space between items */
+}
+
+/* About Items Wrapper */
+.aboutItems {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center align horizontally */
+  align-items: center; /* Center align vertically */
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none; /* Remove bullet points */
+}
+
+/* Individual Skill Card */
+/* Individual Skill Card */
+.aboutItem {
+  background: rgba(255, 255, 255, 0.1); /* Translucent card background */
+  border: 1px solid rgb(255, 255, 255); /* Subtle border */
+  backdrop-filter: blur(10px); /* Glassmorphism effect */
+  border-radius: 15px;
+  padding: 20px;
+  width: 280px; /* Slightly smaller card width */
+  height: 350px; /* Reduced card height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure content is evenly spaced */
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.aboutItem:hover {
+  transform: translateY(-8px); /* Slightly smaller lift on hover */
+  box-shadow: 0px 10px 25px rgb(70, 167, 246); /* Adjusted shadow */
+  border-color: #0da8e6; /* Highlight border on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .aboutItems {
+    gap: 20px; /* Adjust gap for medium screens */
+  }
+
+  .aboutItem {
+    width: 260px; /* Smaller card width for medium screens */
+    height: 320px; /* Reduced height */
+  }
+}
+
+@media (max-width: 768px) {
+  .aboutItems {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px;
+  }
+
+  .aboutItem {
+    width: 90%; /* Full-width cards with slight margin */
+    height: auto; /* Flexible height for responsive layout */
+  }
+
+  .aboutItemText h3 {
+    font-size: 1.3rem; /* Slightly smaller font size for headings */
+  }
+
+  .skillItem {
+    font-size: 0.85rem; /* Adjust skill item font size */
+  }
+}
+
+
+/* Skill Icon */
+.skillIcon {
+  width: 80px;
+  height: 80px;
+  object-fit: cover; /* Maintain aspect ratio */
+  border-radius: 50%; /* Circle shape */
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.skillIcon:hover {
+  transform: scale(1.1); /* Zoom in on hover */
+  border-color: #0da8e6; /* Highlight border on hover */
+}
+
+/* About Item Text */
+.aboutItemText {
+  text-align: center; /* Center-align text */
+  color: #ffffff;
+}
+
+.aboutItemText h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #ffffff; /* White text */
+}
+
+/* Skill List */
+.skillList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* Center skills */
+}
+
+/* Individual Skill Item */
+.skillItem {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  color: #ffffff;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.skillItem:hover {
+  background: #0da8e6; /* Highlight on hover */
+  color: #0d1117; /* Dark text on hover */
+  transform: scale(1.1); /* Slight zoom */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutItems {
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px;
+  }
+
+  .aboutItem {
+    width: 100%; /* Full-width cards */
+    height: auto; /* Allow height adjustment for smaller screens */
+  }
+}
