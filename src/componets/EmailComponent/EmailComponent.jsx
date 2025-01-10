@@ -23,15 +23,15 @@ function EmailComponent() {
     
 
     // These are the service ID , template ID and public key 
-    const service_ID  = "service_qe6i7dq"
-    const template_ID = "template_35hmgua"
-    const public_key  = "pV9eM-fI9W4wg98UD"
+    const service_ID  = "service_wdlv1yq"
+    const template_ID = "template_zf6d33v"
+    const public_key  = "iJ_w6hTI9kD9Eud1n"
 
     // A new object that will  container the dynamic template parameters 
     const template = {
       from_name : fname,
       from_email : email,
-      to_name : "Shivam Sharma",
+      to_name : "Sanskruti Chavan",
       message: message
     }
     //  Now sending the email using email.js 
