@@ -1,0 +1,292 @@
+/* Center the entire layout */
+.box {
+    display: block;
+    justify-content: center;
+    gap: 12px;
+    z-index: 1;
+    align-items: center;
+   
+  
+
+  
+}
+
+/* Left Section Styling */
+.left_section_indexing {
+    flex: 1;
+    max-width: 600px;
+    background: rgba(17, 25, 40, 0.83);
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: rgba(23, 92, 230, 0.1) 0px 4px 24px;
+    margin: 0 auto; /* Ensures the section stays centered */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* Form Styling */
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center; /* Centers form elements horizontally */
+}
+
+/* Title Styling */
+.contactTitle {
+    font-size: 52px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  color: #fff;
+}
+ 
+
+/* Input fields and message box */
+.contactInput,
+.contactMessage {
+    background-color: transparent;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 18px;
+    color: white;
+    border-radius: 12px;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    width: 100%;
+}
+
+.contactInput:focus,
+.contactMessage:focus {
+    border: 1px solid #4e73df;
+}
+
+/* Contact Message Box Resize */
+.contactMessage {
+    resize: vertical;
+}
+
+/* Contact Button Styling */
+.contactButton {
+    background: linear-gradient(225deg, rgb(3, 144, 231) 0%, rgb(71, 195, 244) 100%);
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.contactButton:hover {
+    background: linear-gradient(225deg, rgb(0, 187, 255) 100%, rgb(95, 194, 240) 0%);
+}
+
+/* Right Section Styling */
+.right_section_indexing {
+    flex: 1;
+    max-width: 400px;
+}
+
+/* Location Services */
+.location_services {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.symbol {
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+/* Follow me section styling */
+.follow_me_section {
+    margin-top: 30px;
+}
+
+.account_box {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.account_icon a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.account_icon a:hover {
+    color: #4e73df;
+}
+
+/* Responsive adjustments */
+/* Responsive adjustments for 800px screen */
+@media screen and (max-width: 800px) {
+    .box {
+        padding: 5px;
+        gap: 8px;
+    }
+
+    .left_section_indexing {
+        padding: 6px;
+    }
+
+    .contactForm {
+        gap: 8px;
+    }
+
+    .contactTitle {
+        font-size: 16px;
+        margin-top: 6px;
+    }
+
+    .contactInput,
+    .contactMessage {
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px;
+    }
+
+    .contactButton {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .symbol {
+        font-size: 18px;
+    }
+
+    .account_icon a {
+        font-size: 18px;
+    }
+}
+
+/* Responsive adjustments for 500px screen */
+@media screen and (max-width: 500px) {
+    .box {
+        padding: 4px;
+        gap: 6px;
+    }
+
+    .left_section_indexing {
+        padding: 5px;
+    }
+
+    .contactForm {
+        gap: 6px;
+    }
+
+    .contactTitle {
+        font-size: 14px;
+        margin-top: 4px;
+    }
+
+    .contactInput,
+    .contactMessage {
+        font-size: 12px;
+        padding: 6px;
+        margin-bottom: 8px;
+    }
+
+    .contactButton {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    .symbol {
+        font-size: 14px;
+    }
+
+    .account_icon a {
+        font-size: 14px;
+    }
+}
+
+/* Responsive adjustments for 200px screen */
+@media screen and (max-width: 200px) {
+    .box {
+        padding: 3px;
+        gap: 5px;
+    }
+
+    .left_section_indexing {
+        padding: 4px;
+    }
+
+    .contactForm {
+        gap: 5px;
+    }
+
+    .contactTitle {
+        font-size: 10px;
+        margin-top: 2px;
+    }
+
+    .contactInput,
+    .contactMessage {
+        font-size: 8px;
+        padding: 4px;
+        margin-bottom: 6px;
+    }
+
+    .contactButton {
+        font-size: 8px;
+        padding: 6px;
+    }
+
+    .symbol {
+        font-size: 10px;
+    }
+
+    .account_icon a {
+        font-size: 10px;
+    }
+}
+
+/* Responsive adjustments for 150px screen */
+@media screen and (max-width: 150px) {
+    .box {
+        padding: 2px;
+        gap: 4px;
+    }
+
+    .left_section_indexing {
+        padding: 3px;
+    }
+
+    .contactForm {
+        gap: 4px;
+    }
+
+    .contactTitle {
+        font-size: 8px;
+        margin-top: 1px;
+    }
+
+    .contactInput,
+    .contactMessage {
+        font-size: 6px;
+        padding: 3px;
+        margin-bottom: 4px;
+    }
+
+    .contactButton {
+        font-size: 6px;
+        padding: 4px;
+    }
+
+    .symbol {
+        font-size: 8px;
+    }
+
+    .account_icon a {
+        font-size: 8px;
+    }
+}
