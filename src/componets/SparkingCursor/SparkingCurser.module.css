@@ -1,0 +1,213 @@
+/* Base style for firework-inspired magical sparkles */
+.sparkle {
+  position: absolute;
+  width: 8px; /* Default size */
+  height: 8px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 1) 30%, rgba(255, 255, 255, 0.2) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkleAnimation 1.2s ease-out forwards, flicker 0.6s infinite alternate;
+  filter: blur(2px);
+  z-index: 9999; /* Ensure it's on top */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+/* Add a color-changing glow effect */
+.sparkle::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(255, 0, 150, 0.6), rgba(0, 255, 204, 0));
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: blur(5px);
+  animation: colorPulse 2s infinite alternate;
+}
+
+/* Sparkle animation */
+@keyframes sparkleAnimation {
+  0% {
+    opacity: 1;
+    transform: scale(0.8) translateY(0);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.4) translateY(-10px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.8) translateY(-20px);
+  }
+}
+
+/* Flicker effect for random glow intensity */
+@keyframes flicker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Dynamic color pulsing for vibrant sparkles */
+@keyframes colorPulse {
+  0% {
+    background: radial-gradient(circle, rgba(255, 0, 150, 0.6), rgba(0, 255, 204, 0));
+  }
+  100% {
+    background: radial-gradient(circle, rgba(0, 204, 255, 0.7), rgba(255, 204, 0, 0));
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 800px) {
+  /* Reduce the size of the sparkles */
+  .sparkle {
+    width: 7px;
+    height: 7px;
+  }
+
+  .sparkle::after {
+    width: 130%;
+    height: 130%;
+  }
+
+  /* Adjust animation for mobile */
+  @keyframes sparkleAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(0.7) translateY(0);
+    }
+    50% {
+      opacity: 0.8;
+      transform: scale(1.3) translateY(-8px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.6) translateY(-16px);
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  /* Reduce the size of the sparkles */
+  .sparkle {
+    width: 6px;
+    height: 6px;
+  }
+
+  .sparkle::after {
+    width: 120%;
+    height: 120%;
+  }
+
+  /* Adjust animation for smaller mobile devices */
+  @keyframes sparkleAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(0.6) translateY(0);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.1) translateY(-6px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.4) translateY(-12px);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  /* Further reduce the size of the sparkles */
+  .sparkle {
+    width: 5px;
+    height: 5px;
+  }
+
+  .sparkle::after {
+    width: 110%;
+    height: 110%;
+  }
+
+  /* Adjust animation for even smaller screens */
+  @keyframes sparkleAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(0.5) translateY(0);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1) translateY(-4px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1.2) translateY(-10px);
+    }
+  }
+}
+
+@media (max-width: 200px) {
+  /* Smaller sparkle size for very small screens */
+  .sparkle {
+    width: 4px;
+    height: 4px;
+  }
+
+  .sparkle::after {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* Adjust animation for extremely small screens */
+  @keyframes sparkleAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(0.4) translateY(0);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(0.9) translateY(-3px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(1) translateY(-8px);
+    }
+  }
+}
+
+@media (max-width: 150px) {
+  /* Tiny sparkle size for very small screens */
+  .sparkle {
+    width: 3px;
+    height: 3px;
+  }
+
+  .sparkle::after {
+    width: 90%;
+    height: 90%;
+  }
+
+  /* Adjust animation for extremely small screens */
+  @keyframes sparkleAnimation {
+    0% {
+      opacity: 1;
+      transform: scale(0.3) translateY(0);
+    }
+    50% {
+      opacity: 0.4;
+      transform: scale(0.8) translateY(-2px);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.9) translateY(-5px);
+    }
+  }
+}
