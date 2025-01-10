@@ -1,0 +1,115 @@
+@import "../../vars.css";
+
+.navbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10%; /* Adjust padding for better spacing */
+  z-index: 2;
+}
+
+.title {
+  font-size: 24px; /* Slightly smaller font for mobile */
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.menuBtn {
+  display: none;
+}
+
+.menu {
+  display: flex;
+}
+
+.menuItems {
+  display: flex;
+  gap: 30px; /* Reduced gap for mobile */
+  list-style: none;
+}
+
+.menuItems a {
+  font-size: 20px; /* Adjust text size */
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+/* GitHub Button Styles */
+.githubBtn {
+  display: inline-flex; /* Combines align-items and justify-content naturally */
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px; /* Adjust spacing */
+  padding: 10px 20px; /* Adjust padding */
+  border: 2px solid #00b7ff; /* Sky blue border */
+  border-radius: 20px; /* Rounded corners */
+  color: #03b2f6; /* Sky blue text */
+  background-color: transparent; /* Transparent background */
+  text-decoration: none; /* Remove underline */
+  font-size: 16px; /* Text size */
+  font-weight: 500; /* Slightly bold text */
+  cursor: pointer; /* Pointer cursor */
+  transition: all 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.githubBtn:hover {
+  background-color: #00b7ff; /* Sky blue background on hover */
+  color: white; /* White text on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 830px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    padding: 15px; /* Adjust padding */
+  }
+
+  .title {
+    margin-bottom: 10px; /* Add spacing between title and menu */
+  }
+
+  .menuBtn {
+    display: block; /* Show menu button on mobile */
+    cursor: pointer;
+  }
+
+  .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    align-items: center;
+    gap: 15px; /* Adjust spacing for mobile */
+  }
+
+  .menuItems {
+    display: none; /* Hide menu items initially */
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background: rgb(25, 55, 109);
+    background: linear-gradient(
+      0deg,
+      rgba(25, 55, 109, 0.2) 0%,
+      rgba(25, 55, 109, 1) 100%
+    );
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    position: absolute;
+    top: 100%; /* Position below the navbar */
+    right: 10px; /* Align to the right */
+    z-index: 3;
+  }
+
+  .menuOpen {
+    display: flex; /* Show menu items when open */
+  }
+
+  .githubBtn {
+    margin: 10px 0; /* Center and add spacing for the button */
+    width: 80%; /* Make button adapt to screen width */
+    text-align: center;
+  }
+}
