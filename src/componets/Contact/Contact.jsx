@@ -17,10 +17,10 @@ function Contact() {
     if (form.current) {
       emailjs
         .sendForm(
-          "service_62v73jp",
-          "template_uumdq5c",
+          "service_cb8ppfr",
+          "template_zf6d33v",
           form.current,
-          "5aAcUTvqoxHTCRKGU"
+          "iJ_w6hTI9kD9Eud1n"
         )
         .then(
           (result) => {
