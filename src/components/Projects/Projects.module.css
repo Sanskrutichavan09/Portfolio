@@ -1,0 +1,41 @@
+@import "../../vars.css";
+
+.container {
+  margin-top: 76px;
+  color: var(--color-text);
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #00e5ff;
+  border-radius: 2px;
+}
+
+
+.projects {
+  margin-top: 37px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  width: 100%;
+}

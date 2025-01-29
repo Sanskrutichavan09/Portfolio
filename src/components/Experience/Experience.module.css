@@ -1,0 +1,238 @@
+.container {
+  padding: 40px;
+  margin: 0 10%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: #0a192f;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100px;
+  height: 4px;
+  background-color: #00e5ff;
+  border-radius: 2px;
+}
+
+.content {
+  width: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(0, 229, 255, 0.2);
+  transform: translateX(-50%);
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 60px;
+  width: 50%;
+  opacity: 0;
+}
+
+.rightItem {
+  left: 50%;
+  padding-left: 50px;
+  animation: slideInRight 0.5s ease forwards;
+}
+
+.leftItem {
+  left: 0;
+  padding-right: 50px;
+  animation: slideInLeft 0.5s ease forwards;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineDot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #00e5ff;
+  box-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.rightItem .timelineDot {
+  left: -6px;
+  top: 15px;
+}
+
+.leftItem .timelineDot {
+  right: -6px;
+  top: 15px;
+}
+
+.timelineCard {
+  position: relative;
+  padding: 25px;
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.timelineCard::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1px;
+  background: linear-gradient(45deg, transparent, rgba(0, 229, 255, 0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.timelineCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.1);
+}
+
+.cardContent {
+  position: relative;
+  z-index: 1;
+}
+
+.date {
+  display: block;
+  font-size: 1rem;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+
+.role {
+  color: #00e5ff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.company {
+  color: #ffffff;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #94a3b8;
+}
+
+.description li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.description li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #00e5ff;
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timelineItem:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.timelineItem:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+    margin: 0 5%;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timelineItem {
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .rightItem,
+  .leftItem {
+    left: 0;
+    padding-right: 0;
+  }
+
+  .timelineDot {
+    left: -6px !important;
+    right: auto !important;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .timelineCard {
+    padding: 20px;
+  }
+
+  .role {
+    font-size: 1.25rem;
+  }
+}
+

@@ -1,0 +1,105 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 10%;
+  background-color: #0a192f;
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.title {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.title span {
+  color: #00e5ff;
+}
+
+.menuItems {
+  display: flex;
+  gap: 3rem;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menuItems li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  font-weight: 500;
+}
+
+.menuItems li a:hover {
+  color: #00e5ff;
+}
+
+.githubBtn {
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #00e5ff;
+  border-radius: 4px;
+  color: #00e5ff;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-left: 3rem;
+  background: transparent;
+}
+
+.githubBtn:hover {
+  background-color: rgba(0, 229, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.menuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: #ffffff;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 5%;
+  }
+
+  .menuBtn {
+    display: block;
+  }
+
+  .menuItems {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #0a192f;
+    padding: 1rem;
+    gap: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+
+  .githubBtn {
+    margin-left: 0;
+  }
+}
+

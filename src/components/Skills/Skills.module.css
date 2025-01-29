@@ -1,0 +1,121 @@
+/* Skills Section */
+.container {
+  background-color: rgba(30, 41, 59, 0.8);
+  padding: 40px;
+  border-radius: 15px;
+  margin-top: 80px;
+  margin-left: 10%;
+  margin-right: 10%;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 4px;
+  background-color: #00e5ff;
+  border-radius: 2px;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  gap: 30px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card {
+  background-color: #373e51;
+  width: 250px;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(29, 147, 216, 0.986), 0 5px 15px rgba(29, 147, 216, 0.2);
+}
+
+
+.icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50px ;
+  filter: brightness(1.2);
+  margin-bottom: 15px;
+}
+
+.cardTitle {
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.skillTags {
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tag {
+  background-color: rgba(30, 41, 59, 0.7);
+  color: #94a3b8;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 2rem 1rem;
+    padding: 2rem;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    text-align: center;
+  }
+
+  .title::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
